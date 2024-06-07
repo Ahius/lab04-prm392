@@ -1,15 +1,25 @@
 package com.example.se161047_lab04;
 
 public class Food {
-
+    private int id;
     private String foodName;
     private String foodDes;
-    private int image;
+//    private int image;
+    private String imgae;
 
-    public Food(String foodName, String foodDes, int image) {
+    public Food(int id, String foodName, String foodDes, String imgae) {
+        this.id = id;
         this.foodName = foodName;
         this.foodDes = foodDes;
-        this.image = image;
+        this.imgae = imgae;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFoodName() {
@@ -28,12 +38,12 @@ public class Food {
         this.foodDes = foodDes;
     }
 
-    public int getImage() {
-        return image;
+    public String getImgae() {
+        return imgae;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setImgae(String imgae) {
+        this.imgae = imgae;
     }
 }
 

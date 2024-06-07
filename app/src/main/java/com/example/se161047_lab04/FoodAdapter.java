@@ -2,12 +2,16 @@ package com.example.se161047_lab04;
 
 import android.content.Context;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -53,7 +57,8 @@ public class FoodAdapter extends BaseAdapter {
 
         name.setText(food.getFoodName());
         des.setText(food.getFoodDes());
-        img.setImageResource(food.getImage());
+//        img.setImageResource(food.getImage());
+        Picasso.get().load(food.getImgae()).into(img);
 
 
         return convertView;
